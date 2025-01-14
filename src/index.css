@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+body {
+  background: #171717;
+}
+=======
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
@@ -87,3 +92,4 @@ footer {
   line-height: 60px; /* Centra verticalmente */
   margin-top: 20px;
 }
+>>>>>>> 2db4485fe8f78fc0bda4d485ada63bb605a5867d
