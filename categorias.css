@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-body {
-  background: #171717;
-}
-=======
+
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
@@ -30,6 +26,14 @@ nav {
   text-align: center;
 }
 
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex; /* Alinea los elementos en una fila horizontal */
+  justify-content: center; /* Centra los elementos horizontalmente */
+} 
+
 nav a {
   display: inline-block; /* Alinea los enlaces horizontalmente */
   color: white;
@@ -43,40 +47,27 @@ nav a:hover {
 }
 
 /* Contenedor principal */
-.contenedor {
+
+.tarjetas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px; 
-  margin: 30px;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  margin: 30px auto; /* Centra el contenedor en la pantalla */
+  max-width: 1200px; 
+  padding: 10px; /* Espacio interno del contenedor */
+  box-sizing: border-box; 
+  justify-content: center;
 }
 
-.tarjeta1 {
-  width: 200px;
-  height: 300px;
-  padding: 20px;
+.tarjeta {
+  width: 300px;
+  height: 400px;
+  padding: 30px;
   text-align: center;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
   overflow: hidden;
-  display:row-reverse;
-  margin: 30px;
-  
 }
-
-  .tarjeta2 {
-    width: 200px;
-    height: 300px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: row-reverse;
-    margin: 30px;
-
-
-   
-  }
 
 .sidebar {
   float: left;
@@ -92,22 +83,8 @@ nav a:hover {
   background-color: white;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   margin-left: 5%;
-}
-
-/* Sección de múltiples columnas */
-.multicolumn-section {
-  column-count: 3;
-  column-gap: px;
-  background-color: #bcb0b0;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.multicolumn-section p {
-  margin: 0 0 15px;
 }
 
 /* Pie de página */
@@ -120,4 +97,3 @@ footer {
   line-height: 60px; /* Centra verticalmente */
   margin-top: 20px;
 }
->>>>>>> 2db4485fe8f78fc0bda4d485ada63bb605a5867d
