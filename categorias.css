@@ -78,14 +78,16 @@ nav a:hover {
   
 }
 .imagen {
-  width: 100%;                      /* Ocupa todo el ancho de la tarjeta */
-  height: 150px;                    /* Altura reservada para la foto */
+  width: 40%;                      /* Ocupa todo el ancho de la tarjeta */
+  height: 40%;                     /* Altura reservada para la foto */
   background-color: #f0f0f0;        /* Color de fondo como marcador */
   background-size: cover;           /* Ajusta el tamaño de la imagen */
   background-position: center;
   position:relative;    /* Centra la imagen */
   top: -100px; 
+  object-fit: cover;
 }
+
 
 .tarjeta {
   margin: auto;
@@ -96,6 +98,8 @@ nav a:hover {
   border-radius: 15px;
   box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
   overflow: hidden;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .sidebar {
