@@ -87,8 +87,9 @@ text-align: center;
 } 
 
 .tarjeta {
+  font-family:Georgia, 'Times New Roman', Times, serif;
   width: 300px;
-  height: 450px;
+  height: 475px;
   padding: 20px;
   margin: auto; /* Centra las tarjetas en su columna */
   text-align: center;
