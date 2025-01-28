@@ -47,6 +47,21 @@ nav a:hover {
   border-radius: 5px;
 }
 
+/* Estilo para el botón */
+button#formulario {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Efecto hover para el botón */
+button#formulario:hover {
+  background-color: #45a049;
+}
+
 /* Contenedor principal */
 
 .main-container {
@@ -64,7 +79,7 @@ nav a:hover {
 }
 
 .titulo {
-text-align: center;
+  text-align: center;
 }
 
 .tarjetas {
@@ -87,14 +102,14 @@ text-align: center;
 } 
 
 .tarjeta {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:Georgia, "Times New Roman", Times, serif;
   width: 300px;
   height: 475px;
   padding: 20px;
   margin: auto; /* Centra las tarjetas en su columna */
   text-align: center;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra con opacidad */
+  box-shadow: 0 10px 20px rgb(0 0 0 / 20%); /* Sombra con opacidad */
   overflow: hidden; /* Oculta cualquier contenido que desborde */
   background-color: white; /* Fondo blanco para las tarjetas */
   background-position-y: top; /* Centra la imagen */
