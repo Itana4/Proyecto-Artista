@@ -1,6 +1,5 @@
 import express from "express";
 import morgan from "morgan";
-import { v4 as uuidv4 } from "uuid";
 
 const app = express();
 
@@ -36,7 +35,7 @@ const artistas = [
     links: ["https://open.spotify.com/artist/1efzATzzQtPzky1sbMjVbQ?si=80yRRH2ESHiFYoe5mkOJHg", "https://www.instagram.com/ansiedadcaramelizada?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="],
   },
   {
-    id: uuidv4(),
+    id: "4",
     name: "Kness",
     category: "Cantante",
     shortInformation: "Es una fusión entre toda música que tenga que ver con el ámbito urbano, trap, rap, detroit, etc. Lo que busca en el mundo urbano es darle una nueva cara y un nuevo aire. Siente que faltan artistas como él, y eso le lanza a querer seguir haciendo música.",
@@ -46,7 +45,7 @@ const artistas = [
     links: ["https://open.spotify.com/artist/3hSULzDAv4I2CIbPAIgiM9?si=S7DjxGI6TACeQAZ8l_kNQQ", "https://www.instagram.com/kness.kness?igsh=MXFlNTNzOGhqOGhrdQ=="],
   },
   {
-    id: uuidv4(),
+    id: "5",
     name: "Angie Grim",
     category: "Tatuadora",
     shortInformation: "Tiene un estilo Blackwork concretamente Darkwork que es una rama de dicho estilo que se caracteriza por la temática oscura y tétrica. Siempre le ha gustado todo lo relacionado con las artes oscuras desde pequeña",
@@ -56,7 +55,7 @@ const artistas = [
     links: ["https://www.instagram.com/angiegrim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="],
   },
   {
-    id: uuidv4(),
+    id: "6",
     name: "Gonzalo",
     category: "Tatuador",
     shortInformation: "Su estilo de tatuaje se inspira en la naturaleza y en lo orgánico, en la sensación de dibujar sin forzar, dejando que la mano y la mente fluyan libremente. Sus líneas se convierten en dibujos que expresan más allá de lo que se ve a simple vista.",
@@ -73,7 +72,7 @@ app.use(morgan("tiny"));
 // API
 // Obtener listado artistas
 app.get("/artistas", (req, res) => {
-  const artistasList = artistas.map(artista => ({
+  const artistasList = artistas.map(artista => ({ // para extraer solo los campos que  se han pedido
     id: artista.id,
     name: artista.name,
     category: artista.category,
