@@ -86,6 +86,9 @@ app.get("/artistas/:id", (req, res) => {
   const artistaId = req.params.id;
   const artista = artistas.find(a => a.id === artistaId);
 
+  if (!artista) {
+    return res.status(404).json({ error: "Artista no encontrado" });
+  }
   res.json({
     id: artista.id,
     name: artista.name,
