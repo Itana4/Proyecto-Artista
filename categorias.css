@@ -1,3 +1,5 @@
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable color-function-notation */
 /* stylelint-disable no-unknown-animations */
 /* stylelint-disable font-family-name-quotes */
 /* stylelint-disable color-hex-length */
@@ -12,12 +14,11 @@
 /* Estilos generales */
 body {
   font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
-  margin: 0;
   padding: 0;
-  background-color: linear-gradient(255, 255, 0, 0.5);
   place-items: center;
   width: 100%;
-  box-sizing: border-box; /* Evita diferencias en márgenes y tamaños */
+  
+
 }
 
 .header-img {
@@ -47,10 +48,11 @@ header {
   align-items: center;
   place-items: center;
   display: grid;
+  min-height: 100px;
+  
+  
 
 }
-
-
 /* Navegación horizontal */
 nav {
   display: flex;
@@ -101,7 +103,7 @@ button#formulario:hover {
 /* Contenedor principal */
 .main-container {
   position:relative;
-  margin-top: 150px;
+  margin-top: 150px; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -115,6 +117,7 @@ button#formulario:hover {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
+
 }
 
 .texto {
@@ -144,6 +147,7 @@ button#formulario:hover {
   height: 200px; /* Altura fija para la sección de la imagen */
   background-position-y: top; /* Centra la imagen */
   border-radius: 100%;
+  object-fit: cover;
 } 
 
 .tarjeta {
@@ -158,10 +162,8 @@ button#formulario:hover {
   overflow: hidden; /* Oculta cualquier contenido que desborde */
   background-color: white; /* Fondo blanco para las tarjetas */
   background-position-y: top; /* Centra la imagen */
-  object-fit: cover;
+
 }
-
-
 
 .Artesanos{
   text-justify: center;
@@ -187,11 +189,7 @@ button#formulario:hover {
 
 }
 
-
-
-
 .sidebar {
-  float: left;
   width: 25%; /* Barra lateral ocupa un 25% */
   background-color: #ddd;
   padding: 20px;
@@ -208,6 +206,9 @@ button#formulario:hover {
   margin-left: 5%;
 }
 
+* {
+  box-sizing: border-box;
+}
 /* Pie de página */
 footer {
   width: 100%;
