@@ -1,3 +1,5 @@
+/* stylelint-disable declaration-block-no-shorthand-property-overrides */
+/* stylelint-disable @stylistic/indentation */
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable declaration-property-value-no-unknown */
@@ -10,28 +12,40 @@ body {
   margin: 0;
   padding: 0;
   background-color: linear-gradient(255, 255, 0, 0.5);
+  place-items: center;
 
 }
 
-.ImageHeader {
+.header-img {
   width: 100%;
   height: 50%;
 }
 
+.text-white{
+color: white;
+text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+
+}
+
+
 
 /* Encabezado */
 header {
-  background: url('https://source.unsplash.com/1600x900/?art') center/cover;
-  color: rgb(137, 30, 30);
-  font-size: 2em;
+  background-color: yellow;
+  background-image: url('encabezado.jpeg'); 
+  background-size: cover; /* Ajusta la imagen al tamaño del header */
+  background-position: center 10%; /* Centra la imagen */
+  height: 200px; /* Altura del header */
+  font-size: 3em;
   font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
   text-align: right;
   line-height: 100px; /* Centra verticalmente */
-  padding:0%;
+  padding:0px;
   justify-content: center;
   align-items: center;
-display: grid;
+  display: grid;
   place-items: center;
+  
 
   
 }
@@ -39,7 +53,7 @@ display: grid;
 /* Navegación horizontal */
 nav {
   display: flex;
-  background-color: #6b7578;
+  background-color: #d55731;
   overflow: hidden;
   text-align: center;
   justify-content: space-between;
@@ -87,16 +101,22 @@ button#formulario:hover {
 
 .main-container {
   text-align: center;
-  padding: 15px;
-  padding-top: 20px;
-  text-size-adjust:inherit;
+    padding: 20px;
+    color: #000000;
+    background: white;
+    width: 90%;  /* Ajuste responsivo */
+    max-width: 900px;  /* Evita que sea demasiado ancho */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  
 
 }
 
 .texto {
   font-size: 1.5rem;
-  color: #333;
   padding-top: 50px;
+
 
 }
 
