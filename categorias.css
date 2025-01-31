@@ -21,6 +21,7 @@ body {
 
 }
 
+
 .header-img {
   width: 100%;
   height: 50%;
@@ -39,7 +40,7 @@ header {
   background-size: cover; /* Ajusta la imagen al tamaño del header */
   background-position: center 10%; /* Centra la imagen */
   height: 200px; /* Altura del header */
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
   text-align: right;
   line-height: 100px; /* Centra verticalmente */
@@ -59,7 +60,7 @@ nav {
   background-color: #06550a;
   overflow: hidden;
   text-align: center;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 10px;
 }
@@ -111,8 +112,7 @@ button#formulario:hover {
   padding: 10px;
   color: #000000;
   background: white;
-  width: 110%;
-  max-width: 600px;
+  width: 100%; max-width: 600px;
   height: 260px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -166,7 +166,8 @@ button#formulario:hover {
 }
 
 .Artesanos{
-  text-justify: center;
+  text-align: center;
+ /* text-justify: center; */ 
   color: #d55731;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
