@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--icono-->
     <title>Artistas de Valencia</title>
-
-    <!-- Enlace al CSS -->
-    <link rel="stylesheet" href="categorias.css">
-
-    <!-- Fuente de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Montserrat:wght@300;700&family=Playfair+Display:wght@300;700&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="categorias.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Montserrat:wght@300;700&family=Playfair+Display:wght@300;700&display=swap" rel="stylesheet"> 
 </head>
-
 <body>
-
     <!-- Encabezado -->
-    <header style="background-color: #f1c40f; color: black">
-        <p class="text-white">Artistas de Valencia</p>
+
+    <header style= "background-color: #f1c40f; color: black">
+
+    
+    <p class = "text-white"> Artistas de Valencia </p>
+    
     </header>
+
+</style>
+
+
 
     <!-- Navegación -->
     <nav>
@@ -28,103 +32,145 @@
             <li><a href="#Musicos">Músicos</a></li>
             <li><a href="#Tatuadores">Tatuadores</a></li>
         </ul>
-        <button id="formulario" onclick="window.location.href='formularioPerfil.html'">Añadir artista</button>
+        
     </nav>
+
 
     <!-- Contenedor principal -->
     <div class="main-container">
-        <h3>Bienvenidos a Artistas en Valencia</h3>
-        <p>Sumérgete en un espacio donde el arte cobra vida. Aquí, cada obra cuenta una historia, cada trazo refleja una emoción y cada color despierta una sensación única.</p>
-        <p>Explora nuestra galería, descubre el talento detrás de cada pieza y conecta con artistas apasionados que transforman ideas en arte.</p>
-        <h4>Inspírate, explora y comparte la creatividad.</h4>
+        
+       
+        <!-- Barra lateral -->
+
+        <h3>Bienvienidos a Artistas de Valencia</h3>
+        <p>Sumérgete en un espacio donde el arte cobra vida. Aquí, cada obra cuenta una historia, cada trazo refleja una emoción y cada color despierta una sensación única.
+        </p>
+           <p>Explora nuestra galería, descubre el talento detrás de cada pieza y conecta con artistas apasionados que transforman ideas en arte.
+            <h4>Inspírate, explora y comparte la creatividad.</h4>
+    
+            <button id="formulario" onclick="window.location.href='formularioPerfil.html'">Añadir artista </button>
+        </div>
+     
+        <!-- Contenido principal -->
+        <section id="Artesanos">
+            <section class="Artesanos">
+            <h2> Artesanos</h2>
+        </section>
+    </section>
+
+        <section class="tarjetas">
+
+            <div class="tarjeta">
+
+                <img src="imgDaniela/danielaPortada.png" alt="Imagen centrada" class="imagen">
+
+                <div class="nombre-artista">
+                    <h3> Daniela Chinchilla </h3>
+                </div>
+                <p class="categoria">Artesana</p>
+                <p>Estudió en la UPV el grado Bellas Artes.
+                    Es una artista multidisciplinaria y actualmente se dedica a la creación de piezas con material
+                    biodegradable.</p>
+
+                <a href="perfilDaniela.html">Explora su arte</a>
+            </div>
+
+            <div class="tarjeta">
+
+                <img src="imgDario/darioPortada.png" alt="Imagen centrada" class="imagen">
+
+                <div class="titulo">
+                    <h3> Dario Machin </h3>
+                </div>
+                <p class="titulo">Artesano</p>
+                <p> Es un artista plástico originario de la isla de Lanzarote, realizó sus estudios de grado en Bellas
+                    Artes por la Universidad Complutense de Madrid y posteriormente el máster en Producción Artística
+                    por la Universitat Politècnica de València. </p>
+
+                <a href="perfilDario.html">Explora su arte</a>
+            </div>
+        </section>
+
+        <!-- Contenedor músicos -->
+        <section id="Musicos">
+            <section class="Musicos">
+            <h2> Músicos</h2>
+        </section>
+    </section>
+        <section class="tarjetas">
+            <div class="tarjeta">
+
+                <img src="imgAnsiedadCaramelizada/portadaAnsiedadCaramelizada.jpeg" alt="Imagen centrada"
+                    class="imagen">
+                <div class="titulo">
+                    <h3> Ansiedad Caramelizada </h3>
+                </div>
+                <p class="titulo">Banda musical</p>
+                <p>Es una banda que busca equilibrio entre lo visceral y lo real. Hacen música que puede ser ruidosa o
+                    melódica, pero siempre tienen algo de lo que llevan dentro: momentos de caos, de calma y de todo lo
+                    que hay entre medias.</p>
+
+                <a href="perfilAnsiedad.html">Explora su arte</a>
+            </div>
+
+            <div class="tarjeta">
+
+                <img src="imgKness/knessPortada.png" alt="Imagen centrada" class="imagen">
+                <div class="nombre-artista">
+                    <h3> Kness </h3>
+                </div>
+                <p class="categoria">Cantante</p>
+                <p> Es una fusión entre toda música que tenga que ver con el ámbito urbano, trap, rap, detroit, etc. Lo
+                    que busca en el mundo urbano es darle una nueva cara y un nuevo aire. Siente que faltan artistas
+                    como él, y eso le lanza a querer seguir haciendo música.</p>
+
+                <a href="perfilKness.html">Explora su arte</a>
+            </div>
+        </section>
+        <!--Contenedor audiovisual-->
+        <section id="Tatuadores">
+            <section class="Tatuadores">
+            <h2> Tatuadores</h2>
+        </section>
+    </section>
+        <section class="tarjetas">
+            <div class="tarjeta">
+      
+
+                <img src="imgAngie/angiePortada.png" alt="Imagen centrada" class="imagen">
+                <div class="nombre-artista">
+                    <h3> Angie Grim </h3>
+                </div>
+                <p class="titulo">Tatuadores</p>
+                <p> Tiene un estilo Blackwork concretamente Darkwork que es una rama de dicho estilo que se caracteriza
+                    por la temática oscura y tétrica. Siempre le ha gustado todo lo relacionado con las artes oscuras
+                    desde pequeña.</p>
+
+                <a href="perfilAngie.html">Explora su arte</a>
+            </div>
+
+            <div class="tarjeta">
+
+                <img src="imgGonzalo/gonzaloPortada.jpeg" alt="Imagen centrada" class="imagen">
+                <div class="nombre-artista">
+                    <h3> Gonzalo </h3>
+                </div>
+                <p class="titulo">Tatuadores</p>
+                <p> Su estilo de tatuaje se inspira en la naturaleza y en lo orgánico, en la sensación de dibujar sin
+                    forzar, dejando que la mano y la mente fluyan libremente. Sus líneas se convierten en dibujos que
+                    expresan más allá de lo que se ve a simple vista.</p>
+
+                <a href="perfilGonzalo.html">Explora su arte</a>
+            </div>
+        </section>
+
     </div>
 
-    <!-- Contenido principal -->
-    <section id="Artesanos">
-        <h2>Artesanos</h2>
-    </section>
-
-    <section class="tarjetas">
-        <div class="tarjeta">
-            <img src="imgDaniela/danielaPortada.png" alt="Imagen centrada" class="imagen">
-            <div class="nombre-artista">
-                <h3>Daniela Chinchilla</h3>
-            </div>
-            <p class="categoria">Artesana</p>
-            <p>Estudió en la UPV el grado Bellas Artes. Es una artista multidisciplinaria y actualmente se dedica a la creación de piezas con material biodegradable.</p>
-            <a href="perfilDaniela.html">Explora su arte</a>
-        </div>
-
-        <div class="tarjeta">
-            <img src="imgDario/darioPortada.png" alt="Imagen centrada" class="imagen">
-            <div class="titulo">
-                <h3>Dario Machin</h3>
-            </div>
-            <p class="titulo">Artesano</p>
-            <p>Es un artista plástico originario de la isla de Lanzarote. Realizó sus estudios de grado en Bellas Artes por la Universidad Complutense de Madrid y posteriormente el máster en Producción Artística por la Universitat Politècnica de València.</p>
-            <a href="perfilDario.html">Explora su arte</a>
-        </div>
-    </section>
-
-    <!-- Contenedor músicos -->
-    <section id="Musicos">
-        <h2>Músicos</h2>
-    </section>
-
-    <section class="tarjetas">
-        <div class="tarjeta">
-            <img src="imgAnsiedadCaramelizada/portadaAnsiedadCaramelizada.jpeg" alt="Imagen centrada" class="imagen">
-            <div class="titulo">
-                <h3>Ansiedad Caramelizada</h3>
-            </div>
-            <p class="titulo">Banda musical</p>
-            <p>Es una banda que busca equilibrio entre lo visceral y lo real. Hacen música que puede ser ruidosa o melódica, pero siempre tienen algo de lo que llevan dentro: momentos de caos, de calma y de todo lo que hay entre medias.</p>
-            <a href="perfilAnsiedad.html">Explora su arte</a>
-        </div>
-
-        <div class="tarjeta">
-            <img src="imgKness/knessPortada.png" alt="Imagen centrada" class="imagen">
-            <div class="nombre-artista">
-                <h3>Kness</h3>
-            </div>
-            <p class="categoria">Cantante</p>
-            <p>Es una fusión entre toda música que tenga que ver con el ámbito urbano, trap, rap, detroit, etc. Lo que busca en el mundo urbano es darle una nueva cara y un nuevo aire. Siente que faltan artistas como él, y eso le lanza a querer seguir haciendo música.</p>
-            <a href="perfilKness.html">Explora su arte</a>
-        </div>
-    </section>
-
-    <!-- Contenedor tatuadores -->
-    <section id="Tatuadores">
-        <h2>Tatuadores</h2>
-    </section>
-
-    <section class="tarjetas">
-        <div class="tarjeta">
-            <img src="imgAngie/angiePortada.png" alt="Imagen centrada" class="imagen">
-            <div class="nombre-artista">
-                <h3>Angie Grim</h3>
-            </div>
-            <p class="titulo">Tatuadora</p>
-            <p>Tiene un estilo Blackwork, concretamente Darkwork, que se caracteriza por la temática oscura y tétrica. Siempre le ha gustado todo lo relacionado con las artes oscuras desde pequeña.</p>
-            <a href="perfilAngie.html">Explora su arte</a>
-        </div>
-
-        <div class="tarjeta">
-            <img src="imgGonzalo/gonzaloPortada.jpeg" alt="Imagen centrada" class="imagen">
-            <div class="nombre-artista">
-                <h3>Gonzalo</h3>
-            </div>
-            <p class="titulo">Tatuador</p>
-            <p>Su estilo de tatuaje se inspira en la naturaleza y en lo orgánico, en la sensación de dibujar sin forzar, dejando que la mano y la mente fluyan libremente. Sus líneas se convierten en dibujos que expresan más allá de lo que se ve a simple vista.</p>
-            <a href="perfilGonzalo.html">Explora su arte</a>
-        </div>
-    </section>
 
     <!-- Pie de página -->
     <footer>
         Pie de página - Sitio Web de Ejemplo
     </footer>
-
 </body>
 
 </html>
