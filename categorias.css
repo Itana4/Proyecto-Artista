@@ -12,19 +12,29 @@
 /* stylelint-disable rule-empty-line-before */
 
 /* Estilos generales */
-body {
-  font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
+
+/* ESTO ES IMPORTANTE PARA QUE, POR DEFECTO, LOS NAVEGADORES NO APLIQUEN ESPACIADOS Y MÁRGENES. ES UN RESET, POR ASÍ DECIRLO, PARA QUE QUEDE COMO TÚ DEFINAS Y NO COMO EL NAVEGADOR TENGA POR DEFECTO EN MÁRGENES */
+* {
+  margin: 0;
   padding: 0;
-  place-items: center;
-  width: 100%;
-  
+  box-sizing: border-box;
+}
+
+
+body {
+ 
+font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
+padding: 0;
+place-items: center;
+width: 100%;
+
 
 }
 
 
 .header-img {
-  width: 100%;
-  height: 50%;
+width: 100%;
+height: 50%;
 }
 
 .text-white{
@@ -35,188 +45,190 @@ text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 
 /* Encabezado */
 header {
-  background-color: yellow;
-  background-image: url('encabezado.jpeg'); 
-  background-size: cover; /* Ajusta la imagen al tamaño del header */
-  background-position: center 10%; /* Centra la imagen */
-  height: 200px; /* Altura del header */
-  font-size: 2em;
-  font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
-  text-align: right;
-  line-height: 100px; /* Centra verticalmente */
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
-  display: grid;
-  min-height: 100px;
-  
-  
+background-color: yellow;
+background-image: url('encabezado.jpeg'); 
+background-size: cover; /* Ajusta la imagen al tamaño del header */
+background-position: center 10%; /* Centra la imagen */
+height: 200px; /* Altura del header */
+width: 100%; /* AÑADO ESTO PARA QUE OCUPE TODO EL ANCHO INDEPENDIENTEMENTE DEL NAVEGADOR*/
+font-size: 2em;
+font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
+text-align: right;
+line-height: 100px; /* Centra verticalmente */
+padding: 0;
+justify-content: center;
+align-items: center;
+place-items: center;
+display: grid;
+min-height: 100px;
+
+
 
 }
 /* Navegación horizontal */
 nav {
-  display: flex;
-  background-color: #06550a;
-  overflow: hidden;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
+display: flex;
+background-color: #06550a;
+overflow: hidden;
+text-align: center;
+justify-content: center;
+align-items: center;
+padding: 0 10px;
+width: 100%; /* LO MISMO, ANCHO PARA QUE OCUPE TODO EN CUALQUIER DISPOSITIVO O NAVEGADOR */
 }
 
 nav ul {
-  list-style: none; 
-  margin: 0;
-  padding-left: 85px;
-  display: flex; /* Alinea los elementos en una fila horizontal */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  flex: 1;
+list-style: none; 
+margin: 0;
+padding-left: 85px;
+display: flex; /* Alinea los elementos en una fila horizontal */
+justify-content: center; /* Centra los elementos horizontalmente */
+flex: 1;
 } 
 
 nav a {
-  display: inline-block; /* Alinea los enlaces horizontalmente */
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 10px 20px;
+display: inline-block; /* Alinea los enlaces horizontalmente */
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding: 10px 20px;
 }
 
 nav a:hover {
-  background-color: #157c60;
-  border-radius: 5px;
+background-color: #157c60;
+border-radius: 5px;
 }
 
 /* Estilo para el botón */
 button#formulario {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+background-color: #4caf50;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
 }
 
 /* Efecto hover para el botón */
 button#formulario:hover {
-  background-color: #45a049;
+background-color: #45a049;
 }
 
 /* Contenedor principal */
 .main-container {
-  position:relative;
-  margin-top: 150px; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 10px;
-  color: #000000;
-  background: white;
-  width: 100%; max-width: 600px;
-  height: 260px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
+position:relative;
+margin-top: 150px; 
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+padding: 10px;
+color: #000000;
+background: white;
+width: 100%; max-width: 600px;
+height: 260px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+animation: fadeIn 1s ease-in-out;
 
 }
 
 .texto {
-  font-size: 1.5rem;
-  padding-top: 50px;
+font-size: 1.5rem;
+padding-top: 50px;
 
 }
 
 .titulo {
-  text-align: center;
+text-align: center;
 }
 
 .tarjetas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas de tamaño igual */
-  gap: 20px; /* Espaciado entre tarjetas */
-  margin: 30px auto; /* Centra el contenedor en la pantalla */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  padding: 10px; /* Espaciado interno del contenedor */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  justify-content: center; /* Centra las tarjetas dentro del grid */
-  text-align: center;
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* Dos columnas de tamaño igual */
+gap: 20px; /* Espaciado entre tarjetas */
+margin: 30px auto; /* Centra el contenedor en la pantalla */
+max-width: 1200px; /* Ancho máximo del contenedor */
+padding: 10px; /* Espaciado interno del contenedor */
+box-sizing: border-box; /* Incluye el padding en el ancho total */
+justify-content: center; /* Centra las tarjetas dentro del grid */
+text-align: center;
 }
 
 .imagen {
-  width: 75%; /* La imagen ocupa todo el ancho de la tarjeta */
-  height: 200px; /* Altura fija para la sección de la imagen */
-  background-position-y: top; /* Centra la imagen */
-  border-radius: 100%;
-  object-fit: cover;
+width: 75%; /* La imagen ocupa todo el ancho de la tarjeta */
+height: 200px; /* Altura fija para la sección de la imagen */
+background-position-y: top; /* Centra la imagen */
+border-radius: 100%;
+object-fit: cover;
 } 
 
 .tarjeta {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 300px;
-  height: 475px;
-  padding: 20px;
-  margin: auto; /* Centra las tarjetas en su columna */
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgb(0 0 0 / 20%); /* Sombra con opacidad */
-  overflow: hidden; /* Oculta cualquier contenido que desborde */
-  background-color: white; /* Fondo blanco para las tarjetas */
-  background-position-y: top; /* Centra la imagen */
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+width: 300px;
+height: 475px;
+padding: 20px;
+margin: auto; /* Centra las tarjetas en su columna */
+text-align: center;
+border-radius: 15px;
+box-shadow: 0 10px 20px rgb(0 0 0 / 20%); /* Sombra con opacidad */
+overflow: hidden; /* Oculta cualquier contenido que desborde */
+background-color: white; /* Fondo blanco para las tarjetas */
+background-position-y: top; /* Centra la imagen */
 
 }
 
 .Artesanos{
-  text-align: center;
- /* text-justify: center; */ 
-  color: #d55731;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
+text-align: center;
+/* text-justify: center; */ 
+color: #d55731;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
 
 }
 
 .Musicos{
-  text-justify: center;
-  color: #d55731;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
+text-justify: center;
+color: #d55731;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
 
 }
 
 .Tatuadores{
-  text-justify: center;
-  color: #d55731;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
+text-justify: center;
+color: #d55731;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
 
 }
 
 .sidebar {
-  width: 25%; /* Barra lateral ocupa un 25% */
-  background-color: #ddd;
-  padding: 20px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+width: 25%; /* Barra lateral ocupa un 25% */
+background-color: #ddd;
+padding: 20px;
+box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
 }
 
 .content {
-  float: left;
-  width: 70%; /* Contenido principal ocupa el 70% */
-  background-color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
-  margin-left: 5%;
+float: left;
+width: 70%; /* Contenido principal ocupa el 70% */
+background-color: white;
+padding: 20px;
+box-sizing: border-box;
+box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+margin-left: 5%;
 }
 
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 /* Pie de página */
 footer {
-  width: 100%;
-  height: 60px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  line-height: 60px; /* Centra verticalmente */
-  margin-top: 20px;
+width: 100%;
+height: 60px;
+background-color: #333;
+color: white;
+text-align: center;
+line-height: 60px; /* Centra verticalmente */
+margin-top: 20px;
 }
