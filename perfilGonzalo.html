@@ -1,34 +1,211 @@
-<html>
-    <head>
-        <title>Nearby creatives</title>
-        <link rel="icon" href="https://cdn-icons-png.freepik.com/256/16183/16183594.png?ga=GA1.1.408818383.1733503818&semt=ais_hybrid">
-        <meta charset="uft-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <style>
-          a {
-            color: green;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerby Creatives</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Animación de fade-in */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInAnimation 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background: url('imgGonzalo/gonzaloFondo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80vw;
+            height: 80vh;
+            background: rgba(255, 255, 255, 0.545);
+            border-radius: 50px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .left-section {
+            width: 50%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 48%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* Ajustes para el carrusel */
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Links */
+        a {
+            color: rgb(97, 6, 157);
             text-decoration: none;
-          }
-          a:hover {
-            color: rgb(3, 71, 3);
-          }
-        </style>
-    </head>
-    <body>
-        <h1> Gon</h1>
-        <div>
-            <ul>
-               <p>Hola, soy Gon. Mi estilo de tatuaje se inspira en la naturaleza y en lo orgánico, en la sensación de dibujar sin forzar, dejando que la mano y la mente fluyan libremente. Mis líneas se convierten en dibujos que expresan más allá de lo que se ve a simple vista. Encuentro inspiración en las montañas, los árboles, las piedras y todo lo que me rodea en la “selva” de mi barrio.</p>
-                </p>Me dedico al mundo del tatuaje porque creo en dejar una huella en el lienzo más efímero y bello: la piel humana. Es un arte que permite contar historias, combinar diseño y emociones, y dar voz a pensamientos que muchas veces ni siquiera el cliente puede expresar por sí mismo.</p>
+        }
+
+        a:hover {
+            color: rgb(42, 0, 67);
+        }
+
+        .text-content {
+            font-size: 16px;
+        }
+
+        /* Estilo del h1 + efecto hover */
+        .text-box h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #333;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .text-box h1:hover {
+            color: #12011c;
+            transform: scale(1);
+        }
+
+        .logo-spotify {
+            width: 40px;
+            height: auto;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+
+        .logo-instagram {
+            width: 21px;
+            height: 21px;
+            margin-left: 10px;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+
+        /* Botón de volver */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(109, 109, 109, 0.419);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background: rgb(42, 0, 67);
+        }
+
+        /* Footer fijo */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="back-button" onclick="window.history.back();"> Volver</button>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="text-content fade-in">
+                <div class="text-box fade-in">
+                    <h1><strong>Gonzalo</strong></h1>
+                </div>
+                <p>Hola, soy Gon. Mi estilo de tatuaje se inspira en la <strong>naturaleza</strong> y en lo <strong>orgánico</strong>, en la sensación de dibujar sin forzar, dejando que la mano y la mente fluyan libremente. Mis <strong>líneas</strong> se convierten en dibujos que <strong>espresan más allá de lo que se ve a simple vista</strong>. Encuentro inspiración en las montañas, los árboles, las piedras y todo lo que me rodea en la “selva” de mi barrio.</p>
+                </p>Me dedico al mundo del tatuaje porque creo en dejar una <strong>huella en el lienzo más efímero y bello: la piel humana</strong>. Es un arte que permite contar historias, combinar diseño y emociones, y dar voz a pensamientos que muchas veces ni siquiera el cliente puede expresar por sí mismo.</p>
                 <p>Estudié Diseño Gráfico en Valencia e Ilustración en Teruel y Córdoba, aunque siento que la vida me ha enseñado más que las aulas.</p>
-                <img src="logos/logoInstagram.png" width="2%" height="=2%" alt="Logo instagram"><a href="https://www.instagram.com/gonferal99?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram de tattoos</a>
-                <br><br>
-                <img src="logos/logoInstagram.png" width="2%" height="=2%" alt="logoSpotify"><a href="https://www.instagram.com/gonferart?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram del artista</a>
-            </ul>
+                <div class="instagram-link fade-in">
+                    <a href="https://www.instagram.com/gonferal99?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img src="logos/logoInstagram.png" alt="Instagram" class="logo-instagram">Instagram tattoos
+                    </a>
+                    <a href="https://www.instagram.com/gonferart?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img src="logos/logoInstagram.png" alt="Instagram" class="logo-instagram">Instagram personal
+                    </a>
+                </div>
+            </div>
         </div>
-        <img src="imgGonzalo/gonzalo1.jpeg" width="20%" height="=20%" alt="Imagen de sus trabajos">
-        <img src="imgGonzalo/gonzalo2.jpeg" width="20%" height="=20%" alt="Imagen de sus trabajos">
-        <img src="imgGonzalo/gonzalo3.jpeg" width="20%" height="=20%" alt="Imagen de sus trabajos">
-        <img src="imgGonzalo/gonzalo4.jpeg" width="20%" height="=20%" alt="Imagen de sus trabajos">
-    </body>
+
+        <div class="right-section fade-in">
+            <!-- Carrusel -->
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imgGonzalo/gonzalo1.jpeg" class="d-block w-100" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgGonzalo/gonzalo2.jpeg" class="d-block w-100" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgGonzalo/gonzalo3.jpeg" class="d-block w-100" alt="Imagen 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgGonzalo/gonzalo4.jpeg" class="d-block w-100" alt="Imagen 4">
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Gonzalo - Todos los derechos reservados.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

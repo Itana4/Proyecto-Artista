@@ -1,32 +1,192 @@
-<html>
-    <head>
-        <title>Nearby Creatives</title>
-        <link rel="icon" href="https://cdn-icons-png.freepik.com/256/16183/16183594.png?ga=GA1.1.408818383.1733503818&semt=ais_hybrid">
-        <meta charset="uft-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <style>
-          a {
-            color: green;
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerby Creatives</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .fade-in {
+    opacity: 0; /* Empieza invisible */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    animation: fadeInAnimation 1.5s ease-in-out forwards; /* Aplica la animación */
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        body {
+            background: url('imgAngie/angieFondo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80vw;
+            height: 80vh;
+            background: rgba(255, 255, 255, 0.545);
+            border-radius: 50px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .left-section {
+            width: 50%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 48%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* Ajustes para que las imágenes del carrusel se adapten bien */
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        a {
+            color: rgb(97, 6, 157);
             text-decoration: none;
-          }
-          a:hover {
-            color: rgb(3, 71, 3);
-          }
-        </style>
-    </head>
-    <body>
-        <h1>Angie Grim</h1>
-        <div>
-            <ul>
-               <p>El estilo que hago es Blackwork concretamente Darkwork que es una rama de dicho estilo que se caracteriza por la temática oscura y tétrica . Siempre me ha gustado todo lo relacionado con las artes oscuras desde pequeña. Con mis trabajos siempre los llevo a mi estilo y intento plasmar la idea de mis clientes desde mi punto artístico que considero que es bastante característico.</p>
-                </p>Mis inspiraciónes son tantas que no podría especificar un par en concreto ya que soy una persona que le gusta nutrirse mucho de variedad de artistas y conceptos</p>
-                <p>Desde pequeña siempre he tenido claro que quería dedicarme al mundo del arte y siempre he estado haciendo diversidad de técnicas y de las pocas que me faltaba era tatuar . Fue un flechazo a primera vista el ver que podía hacer feliz a muchas personas y vivir de ello ( que es algo importante tristemente ) y también por otros factores por ejemplo que a pesar de poder dibujar bien etc . El tatuaje es un reto desde el momento uno porque da igual lo bien que dibujes que la complejidad de la técnica y la responsabilidad es altísima para hacer un buen trabajo y eso es algo que me encanta</p>
-                <img src="logos/logoInstagram.png" width="2%" height="=2%" alt="Logo instagram"><a href="https://www.instagram.com/angiegrim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram de tattoos</a>
-            </ul>
+        }
+
+        a:hover {
+            color: rgb(42, 0, 67);
+        }
+
+        .text-content {
+            margin-top: -20px;
+        }
+
+        .text-box h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .icono-instagram {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Estilo para el botón de volver */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(109, 109, 109, 0.419);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background: rgb(42, 0, 67);
+        }
+
+        /* Footer fijo abajo */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #e2e2e2;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button class="back-button" onclick="window.history.back();"> Volver</button>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="text-content fade-in">
+            <div class="text-box fade-in">
+                <h1><strong>Angie Grim</strong></h1>
+            </div>
+            <p>El estilo que hago es<strong> Blackwork</strong> concretamente<strong> Darkwork</strong> que es una rama de dicho estilo que se caracteriza por la<strong> temática oscura y tétrica</strong>. Siempre me ha gustado todo lo relacionado con las<strong> artes oscuras</strong> desde pequeña. Con mis trabajos siempre<strong> los llevo a mi estilo</strong> y intento plasmar la idea de mis clientes desde mi punto artístico que considero que es bastante característico.</p>
+            <p>Mis inspiraciones son tantas que no podría especificar un par en concreto ya que soy una persona que le gusta nutrirse mucho de variedad de artistas y conceptos.</p>
+            <p>Desde pequeña siempre he tenido claro que quería dedicarme al mundo del arte y siempre he estado haciendo diversidad de técnicas y de las pocas que me faltaba era tatuar. Fue un flechazo a primera vista el ver que podía hacer feliz a muchas personas y vivir de ello (que es algo importante tristemente) y también por otros factores.<strong> A pesar de poder dibujar bien, el tatuaje es un reto desde el momento uno porque, da igual lo bien que dibujes, la complejidad de la técnica y la responsabilidad es altísima para hacer un buen trabajo, y eso es algo que me encanta.</strong></p>
+            <div class="instagram-link fade-in">
+                <img src="logos/logoInstagram.png" width="4%" height="=4%" alt="Logo instagram"><a href="https://www.instagram.com/angiegrim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> Instagram de tattoos</a>
+            </div>
         </div>
-        <img src="imgAngie/angie1.png" width="20%" height="=20%" alt="Imagen de sus trabajos">
-        <img src="imgAngie/angie2.png" width="20%" height="=20%" alt="Imagen de sus trabajos">
-        <img src="imgAngie/angie3.png" width="20%" height="=20%" alt="Imagen de sus trabajos">
-        <img src="imgAngie/angie4.png" width="20%" height="=20%" alt="Imagen de sus trabajos">
-    </body>
+        </div>
+
+        <div class="right-section fade-in">
+            <!-- Carrusel de Bootstrap -->
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imgAngie/angie1.png" class="d-block w-100" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgAngie/angie2.png" class="d-block w-100" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgAngie/angie3.png" class="d-block w-100" alt="Imagen 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgAngie/angie4.png" class="d-block w-100" alt="Imagen 4">
+                    </div>
+                </div>
+
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Angie Grim - Todos los derechos reservados.
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
