@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--icono-->
     <title>Artistas de Valencia</title>
-    <link rel="stylesheet" href="categorias.css">
+    
+    <link rel="stylesheet" href="categorias.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Montserrat:wght@300;700&family=Playfair+Display:wght@300;700&display=swap" rel="stylesheet"> 
 </head>
-
 <body>
     <!-- Encabezado -->
-    <header>
-        Artistas de Valencia
+
+    <header style= "background-color: #f1c40f; color: black">
+
+    
+    <p class = "text-white"> Artistas de Valencia </p>
+    
     </header>
+
+
 
     <!-- Navegación -->
     <nav>
@@ -21,106 +30,139 @@
             <li><a href="#Musicos">Músicos</a></li>
             <li><a href="#Tatuadores">Tatuadores</a></li>
         </ul>
+        
     </nav>
 
 
     <!-- Contenedor principal -->
-    <div class="main-container">
-        <!-- Barra lateral -->
-        
-            <h3>¿Necesitas un artista? Aquí lo puedes encontrar!</h3>
-            <p>Aquí puedes colocar enlaces, menús, o información adicional para los usuarios.</p>
-        
-
+    
+    
         <!-- Contenido principal -->
+
         <section id="Artesanos">
+            <div class="main-container">
+        
+       
+                <!-- Barra lateral -->
+        
+                <h3>Bienvienidos a Artistas de Valencia</h3>
+                <p>Sumérgete en un espacio donde el arte cobra vida. Aquí, cada obra cuenta una historia, cada trazo refleja una emoción y cada color despierta una sensación única.
+                </p>
+                   <p>Explora nuestra galería, descubre el talento detrás de cada pieza y conecta con artistas apasionados que transforman ideas en arte.
+                    <h4>Inspírate, explora y comparte la creatividad.</h4>
+            
+                    <button id="formulario" onclick="window.location.href='formularioPerfil.html'">Añadir artista </button>
+                </div>
+
+            <section class="Artesanos">
             <h2> Artesanos</h2>
         </section>
+    </section>
+
 
         <section class="tarjetas">
-        
-            <div class="tarjeta">
-                <div class="imagen"></div>
-                <img src= "imgDaniela/danielaPortada.png" alt="Imagen centrada" class="imagen">
 
-                <div class="titulo">
+            <div class="tarjeta">
+
+                <img src="imgDaniela/danielaPortada.png" alt="Imagen centrada" class="imagen">
+
+                <div class="nombre-artista">
                     <h3> Daniela Chinchilla </h3>
                 </div>
-                <p class="titulo">Artesano</p>
-                <h3>Escribir aquí la biografía del artista </h3>
+                <p class="categoria">Artesana</p>
+                <p>Estudió en la UPV el grado Bellas Artes.
+                    Es una artista multidisciplinaria y actualmente se dedica a la creación de piezas con material
+                    biodegradable.</p>
 
-                <a href="file://wsl.localhost/Debian/home/veronica/workspace/proyecto-arte/perfilDaniela.html">Más informaciones</a>
+                <a href="perfilDaniela.html">Explora su arte</a>
             </div>
 
             <div class="tarjeta">
-                <div class="imagen"></div>
-                <img src= "imgDario/darioPortada.png" alt="Imagen centrada" class="imagen">
+
+                <img src="imgDario/darioPortada.png" alt="Imagen centrada" class="imagen">
+
                 <div class="titulo">
-                    <h2> Dario Machin </h2>
+                    <h3> Dario Machin </h3>
                 </div>
                 <p class="titulo">Artesano</p>
-                <h3>Escribir aquí la biografía del artista </h3>
+                <p> Es un artista plástico originario de la isla de Lanzarote, realizó sus estudios de grado en Bellas
+                    Artes por la Universidad Complutense de Madrid y posteriormente el máster en Producción Artística
+                    por la Universitat Politècnica de València. </p>
 
-                <a href="file://wsl.localhost/Debian/home/veronica/workspace/proyecto-arte/perfilDario.html">Más informaciones</a>
+                <a href="perfilDario.html">Explora su arte</a>
             </div>
         </section>
 
         <!-- Contenedor músicos -->
         <section id="Musicos">
+            <section class="Musicos">
             <h2> Músicos</h2>
         </section>
+    </section>
         <section class="tarjetas">
             <div class="tarjeta">
-                <div class="imagen"></div>
-                <img src= "imgAnsiedadCaramelizada/portadaAnsiedadCaramelizada.jpeg" alt="Imagen centrada" class="imagen">
-                <div class="titulo">
-                    <h2> Ansiedad Caramelizada </h2>
-                </div>
-                <p class="titulo">Músicos</p>
-                <h3>Escribir aquí la biografía del artista </h3>
 
-                <a href="file://wsl.localhost/Debian/home/veronica/workspace/proyecto-arte/perfilAnsiedad.html">Más informaciones</a>
+                <img src="imgAnsiedadCaramelizada/portadaAnsiedadCaramelizada.jpeg" alt="Imagen centrada"
+                    class="imagen">
+                <div class="titulo">
+                    <h3> Ansiedad Caramelizada </h3>
+                </div>
+                <p class="titulo">Banda musical</p>
+                <p>Es una banda que busca equilibrio entre lo visceral y lo real. Hacen música que puede ser ruidosa o
+                    melódica, pero siempre tienen algo de lo que llevan dentro: momentos de caos, de calma y de todo lo
+                    que hay entre medias.</p>
+
+                <a href="perfilAnsiedad.html">Explora su arte</a>
             </div>
 
             <div class="tarjeta">
-                <div class="imagen"></div>
-                <img src= "imgKness/knessPortada.png" alt="Imagen centrada" class="imagen">
-                <div class="titulo">
-                    <h2> Kness </h2>
-                </div>
-                <p class="titulo">Músicos</p>
-                <h3>Escribir aquí la biografía del artista </h3>
 
-                <a href="file://wsl.localhost/Debian/home/veronica/workspace/proyecto-arte/perfilKness.html">Más informaciones</a>
+                <img src="imgKness/knessPortada.png" alt="Imagen centrada" class="imagen">
+                <div class="nombre-artista">
+                    <h3> Kness </h3>
+                </div>
+                <p class="categoria">Cantante</p>
+                <p> Es una fusión entre toda música que tenga que ver con el ámbito urbano, trap, rap, detroit, etc. Lo
+                    que busca en el mundo urbano es darle una nueva cara y un nuevo aire. Siente que faltan artistas
+                    como él, y eso le lanza a querer seguir haciendo música.</p>
+
+                <a href="perfilKness.html">Explora su arte</a>
             </div>
         </section>
         <!--Contenedor audiovisual-->
         <section id="Tatuadores">
+            <section class="Tatuadores">
             <h2> Tatuadores</h2>
         </section>
+    </section>
         <section class="tarjetas">
             <div class="tarjeta">
-                <div class="imagen"></div>
-                <img src= "imgAngie/angiePortada.png" alt="Imagen centrada" class="imagen">
-                <div class="titulo">
-                    <h2> Angie Grim </h2>
+      
+
+                <img src="imgAngie/angiePortada.png" alt="Imagen centrada" class="imagen">
+                <div class="nombre-artista">
+                    <h3> Angie Grim </h3>
                 </div>
                 <p class="titulo">Tatuadores</p>
-                <h3>Escribir aquí la biografía del artista </h3>
+                <p> Tiene un estilo Blackwork concretamente Darkwork que es una rama de dicho estilo que se caracteriza
+                    por la temática oscura y tétrica. Siempre le ha gustado todo lo relacionado con las artes oscuras
+                    desde pequeña.</p>
 
-                <a href="perfilAngie.html">Más informaciones</a> <!--el que creemos que funciona-->
+                <a href="perfilAngie.html">Explora su arte</a>
             </div>
 
             <div class="tarjeta">
-                <div class="imagen"></div>
-                <img src= "imgGonzalo/gonzaloPortada.jpeg" alt="Imagen centrada" class="imagen">
-                <div class="titulo">
-                    <h2> Gonzalo </h2>
+
+                <img src="imgGonzalo/gonzaloPortada.jpeg" alt="Imagen centrada" class="imagen">
+                <div class="nombre-artista">
+                    <h3> Gonzalo </h3>
                 </div>
                 <p class="titulo">Tatuadores</p>
-                <h3>Escribir aquí la biografía del artista </h3>
+                <p> Su estilo de tatuaje se inspira en la naturaleza y en lo orgánico, en la sensación de dibujar sin
+                    forzar, dejando que la mano y la mente fluyan libremente. Sus líneas se convierten en dibujos que
+                    expresan más allá de lo que se ve a simple vista.</p>
 
-                <a href="file://wsl.localhost/Debian/home/veronica/workspace/proyecto-arte/perfilGonzalo.html">Más informaciones</a>
+                <a href="perfilGonzalo.html">Explora su arte</a>
             </div>
         </section>
 

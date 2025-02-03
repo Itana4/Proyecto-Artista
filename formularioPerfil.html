@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear perfil</title>
+    <link rel="stylesheet" href="formularioPerfil.css">
+</head>
+
+<body>
+    <form id="form-artista">
+        <label for="name">Nombre y apellidos:</label>
+        <input type="text" name="name" placeholder="Nombre y Apellidos" required />
+
+        <label for="category">Categoría:</label>
+        <select name="category" required>
+            <option value="Artesano">Artesano</option>
+            <option value="Musico">Músico</option>
+            <option value="Tatuador">Tatuador</option>
+        </select>
+
+        <label for="profilePhoto">Foto de perfil:</label>
+        <input type="file" name="profilePhoto" />
+
+        <label for="information">Información completa:</label>
+        <textarea name="information" placeholder="Información completa" required></textarea>
+
+        <label for="shortInformation">Breve descripción:</label>
+        <textarea name="shortInformation" placeholder="Breve descripción" required></textarea>
+
+        <label for="gallery">Galería:</label>
+        <input type="file" name="gallery" multiple />
+
+        <label for="links">Links:</label>
+        <input type="text" name="links" placeholder="Enlaces (URLs separadas por comas)" />
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
