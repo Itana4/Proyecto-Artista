@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Artista</title>
+    <style>
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Dos columnas de tamaño igual */
+            gap: 20px;
+            /* Espaciado entre tarjetas */
+            margin: 30px auto;
+            /* Centra el contenedor en la pantalla */
+            max-width: 1200px;
+            /* Ancho máximo del contenedor */
+            padding: 10px;
+            /* Espaciado interno del contenedor */
+            box-sizing: border-box;
+            /* Incluye el padding en el ancho total */
+            justify-content: center;
+            /* Centra las tarjetas dentro del grid */
+            text-align: center;
+        }
+
+        .imagen {
+            width: 75%;
+            /* La imagen ocupa todo el ancho de la tarjeta */
+            height: 200px;
+            /* Altura fija para la sección de la imagen */
+            background-position-y: top;
+            /* Centra la imagen */
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .tarjeta {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 300px;
+            height: 475px;
+            padding: 20px;
+            margin: auto;
+            /* Centra las tarjetas en su columna */
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+            /* Sombra con opacidad */
+            overflow: hidden;
+            /* Oculta cualquier contenido que desborde */
+            background-color: white;
+            /* Fondo blanco para las tarjetas */
+            background-position-y: top;
+            /* Centra la imagen */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="tarjetas">
+        <div class="tarjeta" id="tarjeta-artista">
+            <img src="" alt="Imagen del artista" class="imagen" id="imagen-artista">
+            <div class="nombre-artista">
+                <h3 id="nombre-artista">Nombre del Artista</h3>
+            </div>
+            <p class="categoria" id="categoria-artista">Categoría</p>
+            <p id="descripcion-corta">Breve descripción del artista</p>
+            <a href="#" id="link-perfil">Explora su arte</a>
+        </div>
+    </section>
+
+    <script>
+        // Función para obtener datos del almacenamiento y actualizar la tarjeta
+
+    </script>
+
+</body>
+
+</html>
