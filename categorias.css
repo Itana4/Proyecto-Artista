@@ -20,9 +20,7 @@
   box-sizing: border-box;
 }
 
-
 body {
- 
 font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
 padding: 0;
 place-items: center;
@@ -30,7 +28,6 @@ width: 100%;
 
 
 }
-
 
 .header-img {
 width: 100%;
@@ -50,7 +47,7 @@ background-image: url('encabezado.jpeg');
 background-size: cover; /* Ajusta la imagen al tamaño del header */
 background-position: center 10%; /* Centra la imagen */
 height: 200px; /* Altura del header */
-width: 100%; /* AÑADO ESTO PARA QUE OCUPE TODO EL ANCHO INDEPENDIENTEMENTE DEL NAVEGADOR*/
+width: 100%; /* AÑADO ESTO PARA QUE OCUPE TODO EL ANCHO INDEPENDIENTEMENTE DEL NAVEGADOR */
 font-size: 2em;
 font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
 text-align: right;
@@ -178,7 +175,6 @@ background-position-y: top; /* Centra la imagen */
 }
 
 .Artesanos{
-text-align: center;
 /* text-justify: center; */ 
 color: #d55731;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
