@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 document.getElementById("perfilForm").addEventListener("submit", async function (event) {
   event.preventDefault(); // Evita el comportamiento por defecto del formulario
 
@@ -42,7 +43,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
         const galleryFormData = new FormData();
         galleryFormData.append("file", file);
 
-        const galleryResponse = await fetch("http://localhost:3000/artistas/upload", {
+        const galleryResponse = await fetch("http://localhost:3000/addArtista", {
           method: "POST",
           body: galleryFormData,
         });
