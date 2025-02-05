@@ -1,8 +1,6 @@
-/* eslint-disable no-await-in-loop */
 document.getElementById("perfilForm").addEventListener("submit", async function (event) {
   event.preventDefault(); // Evita el comportamiento por defecto del formulario
 
-  // Obtener datos del formulario
   const form = event.target;
   const formData = new FormData(form);
 
@@ -12,15 +10,12 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
     category: formData.get("category"),
     information: formData.get("information"),
     shortInformation: formData.get("shortInformation"),
-    links: formData.get("links").split(",").map(link => link.trim()), // Separar los enlaces
+    links: formData.get("links").split(",").map(link => link.trim()), // Separar los enlaces por comas
   };
 
-  // Manejar subida de archivos (imagen de perfil y galería)
-  const profilePhoto = formData.get("profilePhoto");
-  const galleryFiles = formData.getAll("gallery");
-
   try {
-    // Subir archivos al servidor si existen
+    // Subir la imagen de perfil, si existe
+    const profilePhoto = formData.get("profilePhoto");
     if (profilePhoto.size > 0) {
       const photoFormData = new FormData();
       photoFormData.append("file", profilePhoto);
@@ -36,6 +31,8 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
       nuevoArtista.profilePhoto = photoURL;
     }
 
+    // Subir los archivos de galería, si existen
+    const galleryFiles = formData.getAll("gallery");
     if (galleryFiles.length > 0) {
       const galleryURLs = [];
 
@@ -43,7 +40,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
         const galleryFormData = new FormData();
         galleryFormData.append("file", file);
 
-        const galleryResponse = await fetch("http://localhost:3000/addArtista", {
+        const galleryResponse = await fetch("http://localhost:3000/artistas/upload", {
           method: "POST",
           body: galleryFormData,
         });
@@ -57,7 +54,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
       nuevoArtista.gallery = galleryURLs;
     }
 
-    // Enviar datos del artista al backend
+    // Enviar los datos del artista al backend
     const response = await fetch("http://localhost:3000/artistas", {
       method: "POST",
       headers: {
@@ -75,6 +72,8 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
     agregarTarjeta(nuevoArtista, data.perfilURL);
 
     alert("¡Perfil creado con éxito!");
+    // Redirigir al perfil creado
+    window.location.href = data.perfilURL;
   } catch (error) {
     console.error("Error:", error);
     alert("Ocurrió un error al crear el perfil. Intenta nuevamente.");
