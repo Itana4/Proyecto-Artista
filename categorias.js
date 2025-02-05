@@ -1,5 +1,5 @@
-const getArtistas = () => fetch("http://localhost:3000/artistas")
-  .then((response) => {
+const getArtistas = () => fetch("http://localhost:3000/artistas");
+.then((response) => {
     if (!response.ok) {
       throw new Error(`Error en la solicitud: ${response.status}`);
     }
