@@ -4,7 +4,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
   const form = event.target;
   const formData = new FormData(form);
 
-  // Crear un objeto con los datos del formulario
+  // Crear un objeto con los datos del formulario (sin los archivos aún)
   const nuevoArtista = {
     name: formData.get("name"),
     category: formData.get("category"),
@@ -54,13 +54,26 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
       nuevoArtista.gallery = galleryURLs;
     }
 
-    // Enviar los datos del artista al backend
+    // Ahora usar FormData para enviar todos los datos, incluidos los archivos
+    const perfilFormData = new FormData();
+    perfilFormData.append("name", nuevoArtista.name);
+    perfilFormData.append("category", nuevoArtista.category);
+    perfilFormData.append("information", nuevoArtista.information);
+    perfilFormData.append("shortInformation", nuevoArtista.shortInformation);
+    perfilFormData.append("links", JSON.stringify(nuevoArtista.links)); // Enviar los enlaces como una cadena JSON
+
+    if (nuevoArtista.profilePhoto) {
+      perfilFormData.append("profilePhoto", nuevoArtista.profilePhoto); // Agregar la URL de la foto de perfil
+    }
+
+    if (nuevoArtista.gallery) {
+      perfilFormData.append("gallery", JSON.stringify(nuevoArtista.gallery)); // Agregar las URLs de la galería
+    }
+
+    // Enviar los datos del artista al backend usando FormData
     const response = await fetch("http://localhost:3000/artistas", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(nuevoArtista),
+      body: perfilFormData, // Usar FormData aquí
     });
 
     if (!response.ok) throw new Error("Error al crear el perfil");
