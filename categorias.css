@@ -26,7 +26,6 @@ padding: 0;
 place-items: center;
 width: 100%;
 
-
 }
 
 .header-img {
@@ -58,8 +57,6 @@ align-items: center;
 place-items: center;
 display: grid;
 min-height: 100px;
-
-
 
 }
 /* Navegación horizontal */
@@ -215,7 +212,7 @@ box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 margin-left: 5%;
 }
 
-* {
+{
 box-sizing: border-box;
 }
 /* Pie de página */
