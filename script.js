@@ -16,7 +16,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
   try {
     // Subir la imagen de perfil, si existe
     const profilePhoto = formData.get("profilePhoto");
-    if (profilePhoto.size > 0) {
+    if (profilePhoto && profilePhoto.size > 0) {
       const photoFormData = new FormData();
       photoFormData.append("file", profilePhoto);
 
@@ -27,16 +27,14 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
 
       if (!photoResponse.ok) throw new Error("Error al subir la foto de perfil");
 
-      const { url: photoURL } = await photoResponse.json();
-      nuevoArtista.profilePhoto = photoURL;
+      const { filePath } = await photoResponse.json(); // Asegúrate de que el backend devuelve 'filePath'
+      nuevoArtista.profilePhoto = filePath;
     }
 
     // Enviar los archivos de galería, si existen
     const galleryFiles = formData.getAll("gallery");
     if (galleryFiles.length > 0) {
-      const galleryURLs = [];
-
-      for (const file of galleryFiles) {
+      const galleryUploads = galleryFiles.map(async (file) => {
         const galleryFormData = new FormData();
         galleryFormData.append("file", file);
 
@@ -47,11 +45,12 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
 
         if (!galleryResponse.ok) throw new Error("Error al subir un archivo de la galería");
 
-        const { filePath } = await galleryResponse.json(); // Cambiado de 'url' a 'filePath'
-        galleryURLs.push(filePath);
-      }
+        const { filePath } = await galleryResponse.json();
+        return filePath;
+      });
 
-      nuevoArtista.gallery = galleryURLs;
+      // Esperar a que todas las promesas se resuelvan en paralelo
+      nuevoArtista.gallery = await Promise.all(galleryUploads);
     }
 
     // Ahora usar FormData para enviar todos los datos, incluidos los archivos
@@ -67,7 +66,9 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
     }
 
     if (nuevoArtista.gallery) {
-      perfilFormData.append("gallery", JSON.stringify(nuevoArtista.gallery)); // Agregar las URLs de la galería
+      nuevoArtista.gallery.forEach(url => {
+        perfilFormData.append("gallery", url); // Enviar galería como array
+      });
     }
 
     // Enviar los datos del artista al backend usando FormData
