@@ -31,7 +31,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
       nuevoArtista.profilePhoto = photoURL;
     }
 
-    // Subir los archivos de galería, si existen
+    // Enviar los archivos de galería, si existen
     const galleryFiles = formData.getAll("gallery");
     if (galleryFiles.length > 0) {
       const galleryURLs = [];
@@ -47,8 +47,8 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
 
         if (!galleryResponse.ok) throw new Error("Error al subir un archivo de la galería");
 
-        const { url } = await galleryResponse.json();
-        galleryURLs.push(url);
+        const { filePath } = await galleryResponse.json(); // Cambiado de 'url' a 'filePath'
+        galleryURLs.push(filePath);
       }
 
       nuevoArtista.gallery = galleryURLs;
