@@ -11,7 +11,16 @@ const getArtistas = () => {
       throw new Error("Error al cargar los perfiles");
     });
 };
-
+const artistas = getArtistas();
+const printArtistas = (artistas) => {
+  const list = document.getElementById("artistas");
+  list.innerHTML = "";
+  artistas.forEach((artista) => {
+    const item = document.createElement("li");
+    item.textContent = artista.name;
+    list.appendChild(item);
+  });
+};
 const artistaId = () => {
   fetch(`http://localhost:3000/artistas/${artistaId}`)
     .then((response) => {
