@@ -1,3 +1,11 @@
+function convertToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+}
 document.getElementById("perfilForm").addEventListener("submit", async function (event) {
   event.preventDefault(); // Evita el comportamiento por defecto del formulario
 
@@ -12,7 +20,15 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
     shortInformation: formData.get("shortInformation"),
     links: formData.get("links").split(",").map(link => link.trim()), // Separar los enlaces por comas
   };
+  // Función para convertir una imagen a Base64
 
+  const profilePhoto = document.getElementById("profilePhoto"); // Input de imagen
+  // Manejo de la imagen (conversión a Base64)
+  let imagen = "";
+  if (profilePhoto.files.length > 0) {
+    const file = fileInput.files[0];
+    imagen = await convertToBase64(file); // Convertimos la imagen a Base64
+  }
   try {
     // Subir la imagen de perfil, si existe
     const profilePhoto = formData.get("profilePhoto");
