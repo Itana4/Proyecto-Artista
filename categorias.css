@@ -65,7 +65,7 @@ min-height: 100px;
 }
 /* Navegación horizontal */
 nav {
-display: flex;
+display: grid;
 background-color: #3c3e3c;
 overflow: hidden;
 text-align: center;
@@ -124,7 +124,7 @@ text-align: center;
 padding: 20px;
 color: #000000;
 background: white;
-width: 70%;
+width: 70%; 
 margin-left: 10%;
 height: 200px;
 border-radius: 10px;
