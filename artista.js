@@ -1,5 +1,5 @@
 const artistaId = () => {
-  fetch(`http://localhost:3000/artistas/${artistaId}`)
+  fetch("http://localhost:3000/artistas/:id")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Error en la solicitud: ${response.status}`);
