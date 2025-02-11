@@ -106,6 +106,7 @@ border: none;
 cursor: pointer;
 border-radius: 5px;
 margin-top: 15px;
+padding-top: 15px;
 }
 
 /* Efecto hover para el botón */
@@ -118,12 +119,12 @@ background-color: #45a049;
 margin-top: 20px; 
 margin-bottom: 20px;
 top: 50%;
-left: 50%;
+left: 70%;
 text-align: center;
 padding: 20px;
 color: #000000;
 background: white;
-width: 80%;
+width: 70%;
 margin-left: 10%;
 height: 200px;
 border-radius: 10px;
@@ -177,32 +178,36 @@ overflow: hidden; /* Oculta cualquier contenido que desborde */
 background-color: white; /* Fondo blanco para las tarjetas */
 background-position-y: top; /* Centra la imagen */
 box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
-overflow: hidden;
-
 }
 
 .Artesanos{
 /* text-justify: center; */ 
-color: #d55731;
+color: #3c3e3c;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-align: center;
-
+margin-top:15px;
+padding-top: 60px;
+text-shadow: 3px 3px 5px rgb(109, 106, 105);
 }
 
 .Musicos{
 text-justify: center;
-color: #d55731;
+color: #3c3e3c;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-align: center;
-
+margin-top:15px;
+padding-top: 60px;
+text-shadow: 3px 3px 5px rgb(109, 106, 105);
 }
 
 .Tatuadores{
 text-justify: center;
-color: #d55731;
+color: #3c3e3c;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-align: center;
-
+margin-top:15px;
+padding-top: 60px;
+text-shadow: 3px 3px 5px rgb(109, 106, 105);
 }
 
 .sidebar {
@@ -222,7 +227,6 @@ box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 margin-left: 5%;
 }
 
-
 /* Pie de página */
 footer {
   
@@ -230,8 +234,8 @@ footer {
   .contact-item {
     display: flex;
     justify-content: center;
-color:#000000;
-background-color:  #d86846;
+color:#020101;
+background-color:  #9e9797;
 height: auto;
 
   }
