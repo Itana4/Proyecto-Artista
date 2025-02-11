@@ -26,7 +26,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
   // Manejo de la imagen (conversión a Base64)
   let imagen = "";
   if (profilePhoto.files.length > 0) {
-    const file = fileInput.files[0];
+    const file = profilePhoto.files[0];
     imagen = await convertToBase64(file); // Convertimos la imagen a Base64
   }
   try {
@@ -34,7 +34,7 @@ document.getElementById("perfilForm").addEventListener("submit", async function 
     const profilePhoto = formData.get("profilePhoto");
     if (profilePhoto && profilePhoto.size > 0) {
       const photoFormData = new FormData();
-      photoFormData.append("file", profilePhoto);
+      photoFormData.append("file");
 
       const photoResponse = await fetch("http://localhost:3000/artistas/upload", {
         method: "POST",
