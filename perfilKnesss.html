@@ -102,7 +102,8 @@
             <p>Mis inspiraciones no han sido muy sólidas hasta no hace mucho, gente como
                 <strong>Dano</strong>,<strong>Ébano</strong>, <strong>Hoke</strong>, <strong>D.Valentino</strong>,
                 <strong>M4rk</strong>, artistas de tanto la nueva ola como los que ya estaban he cogido la parte que más
-                me gusta de cada uno y he intentado hacerla a mi talla, ese es mi objetivo</p>
+                me gusta de cada uno y he intentado hacerla a mi talla, ese es mi objetivo
+            </p>
             </p>No sé si soy capaz de explicarlo con detenimiento que es lo que me gusta concretamente de la música ya
             que sólo me sale decir que me gusta todo de ella. Desde pequeño me gusta el arte, antes <strong>iba para el
                 dibujo</strong>, pero desde <strong>2018 mi vida cambió a querer vivir de las melodías</strong>, de
@@ -150,6 +151,15 @@
     </footer>
     <script src="artista.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="application/javascript">
+        // add listener
+        document.addEventListener("DOMContentLoaded", async () => {
+            const artista = await artistaId('Kness');
+            if (artista) {
+                printArtista(artista);
+            }
+        });
+    </script>
 </body>
 
 </html>

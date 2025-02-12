@@ -163,7 +163,8 @@
                     <strong>orgánico</strong>, en la sensación de dibujar sin forzar, dejando que la mano y la mente
                     fluyan libremente. Mis <strong>líneas</strong> se convierten en dibujos que <strong>espresan más
                         allá de lo que se ve a simple vista</strong>. Encuentro inspiración en las montañas, los
-                    árboles, las piedras y todo lo que me rodea en la “selva” de mi barrio.</p>
+                    árboles, las piedras y todo lo que me rodea en la “selva” de mi barrio.
+                </p>
                 </p>Me dedico al mundo del tatuaje porque creo en dejar una <strong>huella en el lienzo más efímero y
                     bello: la piel humana</strong>. Es un arte que permite contar historias, combinar diseño y
                 emociones, y dar voz a pensamientos que muchas veces ni siquiera el cliente puede expresar por sí mismo.
@@ -220,6 +221,15 @@
         &copy; 2025 Gonzalo - Todos los derechos reservados.
     </footer>
     <script src="artista.js"></script>
+    <script type="application/javascript">
+        // add listener
+        document.addEventListener("DOMContentLoaded", async () => {
+            const artista = await artistaId('Gonzalo');
+            if (artista) {
+                printArtista(artista);
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

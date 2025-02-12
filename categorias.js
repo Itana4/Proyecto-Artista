@@ -11,7 +11,7 @@ const getArtistas = () => {
       throw new Error("Error al cargar los perfiles");
     });
 };
-const artistas = getArtistas();
+getArtistas();
 const printArtistas = (artistas) => {
   const list = document.getElementById("artistas");
   list.innerHTML = "";

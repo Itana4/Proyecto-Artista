@@ -1,5 +1,5 @@
-const artistaId = () => {
-  fetch("http://localhost:3000/artistas/:id")
+const artistaId = (name) => {
+  fetch(`http://localhost:3000/artistas/${name}`)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Error en la solicitud: ${response.status}`);
@@ -21,10 +21,3 @@ const printArtista = (artista) => {
     list.appendChild(item);
   });
 };
-// add listener
-document.addEventListener("DOMContentLoaded", async () => {
-  const artista = await artistaId();
-  if (artista) {
-    printArtista(artista);
-  }
-});

@@ -163,14 +163,16 @@
                     puede ser<strong> ruidosa o melódica</strong>, pero siempre tiene algo de lo que llevamos dentro:
                     <strong>momentos de caos</strong>, de <strong>calma</strong> y de todo<strong> lo que hay entre
                         medias</strong>. Nos inspira lo cotidiano, esas cosas que parecen pequeñas pero te remueven por
-                    dentro, y tratamos de capturarlas en nuestras canciones para que conecten con quien las escuche.</p>
+                    dentro, y tratamos de capturarlas en nuestras canciones para que conecten con quien las escuche.
+                </p>
                 </p>Queremos transmitir la <strong>belleza de lo imperfecto</strong>, la magia de los momentos fugaces
                 que parecen insignificantes pero lo son todo. Nuestras canciones son como diarios sonoros de emociones
                 intensas: la nostalgia, la ansiedad, el amor, y esa sensación de estar perdido pero contento.</p>
                 <p>Nuestras inspiraciones vienen tanto de la música como de lo cotidiano. Bandas como
                     <strong>Slowdive</strong> , <strong>Joy Division</strong> o <strong>Title Fight</strong> nos han
                     marcado, pero también el cine independiente, los paisajes urbanos vacíos y las conversaciones a las
-                    tres de la mañana.</p>
+                    tres de la mañana.
+                </p>
                 </p><strong>Hacemos música porque es la forma más honesta que tenemos de conectar</strong>, tanto con
                 nosotros mismos como con los demás. Es un espacio donde podemos ser vulnerables sin máscaras, y al mismo
                 tiempo crear algo que pueda resonar en otros. También lo hacemos por esa gente que, en medio de una
@@ -229,6 +231,15 @@
         &copy; 2025 Ansiedad Caramelizada - Todos los derechos reservados.
     </footer>
     <script src="artista.js"></script>
+    <script type="application/javascript">
+        // add listener
+        document.addEventListener("DOMContentLoaded", async () => {
+            const artista = await artistaId('Ansiedad Caramelizada');
+            if (artista) {
+                printArtista(artista);
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
