@@ -1,11 +1,17 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable function-url-quotes */
+/* stylelint-disable @stylistic/string-quotes */
+/* stylelint-disable @stylistic/indentation */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: gray;
+  background-image: url(ImagenesFondo/Diseño2.png);
   margin: 0;
-  padding: 0;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 form {
@@ -62,4 +68,32 @@ textarea {
   border-radius: 4px;
   resize: vertical; /* Permitir que el usuario ajuste la altura */
   height: 100px; /* Altura predeterminada */
+}
+
+.back-button
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgb(100, 203, 100);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80px;
+}
+
+.back-button:hover {
+    background: rgb(42, 0, 67);
+}
+
+.titulo-formulario
+{
+position: absolute;
+top: 20px;
+font-size: 30px;
+font-family: 'Times New Roman', Times, serif;
+
 }
