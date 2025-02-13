@@ -48,9 +48,9 @@ header {
 display: block; 
 margin: 0 auto; 
 background-image: url("ImagenesFondo/banner.png");
-background-size: cover; /* Ajusta la imagen al tamaño del header */
-background-position: center 10%; /* Centra la imagen */
-height: 300px; /* Altura del header */
+background-size:auto; /* Ajusta la imagen al tamaño del header */
+background-position: right;  /* Centra la imagen */
+height: 200px; /* Altura del header */
 width: 100%; /* AÑADO ESTO PARA QUE OCUPE TODO EL ANCHO INDEPENDIENTEMENTE DEL NAVEGADOR */
 font-size: 2em;
 font-family: 'Raleway', 'Montserrat', 'Playfair Display', sans-serif;
@@ -79,7 +79,7 @@ height: 50px;
 nav ul {
 list-style: none; 
 margin: 0;
-padding-left: 85px;
+padding-left: 0;
 display: flex; /* Alinea los elementos en una fila horizontal */
 justify-content: center; /* Centra los elementos horizontalmente */
 flex: 1;
@@ -106,7 +106,7 @@ border: none;
 cursor: pointer;
 border-radius: 5px;
 margin-top: 15px;
-padding-top: 15px;
+padding-top: 10px;
 }
 
 /* Efecto hover para el botón */
